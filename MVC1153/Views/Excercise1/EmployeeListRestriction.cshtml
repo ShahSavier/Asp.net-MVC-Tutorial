@@ -1,0 +1,204 @@
+﻿@model IEnumerable<MVC1153.Models.Employee>
+
+<h2>Example 4</h2>
+<br />
+<h3>
+    List Of Employees Restriction
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int row = 1; }
+    @foreach (var employee in ViewBag.Female)
+    {
+        <tr>
+            <td>@row</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        row++;
+    }
+</table>
+<br />
+<br />
+<h3>
+    List Of Employees Restriction by MIIT Campus
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int a = 1; }
+    @foreach (var employee in ViewBag.MIIT)
+    {
+        <tr>
+            <td>@a</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        a++;
+    }
+</table>
+<br />
+<br />
+<h3>
+    List Of Employees Restriction by High Salary
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int salary = 1; }
+    @foreach (var employee in ViewBag.HighSalary)
+    {
+        <tr>
+            <td>@salary</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        salary++;
+    }
+</table>
+<br />
+<br />
+<h3>
+    List Of Employees Restriction by Senior
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int senior = 1; }
+    @foreach (var employee in ViewBag.Senior)
+    {
+        <tr>
+            <td>@senior</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        senior++;
+    }
+</table>
+
+<br />
+<br />
+<h2>Multiple Condition</h2>
+<br />
+<br />
+<h3>
+    List Of Employees Restriction by SeniorMale
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int seniorm = 1; }
+    @foreach (var employee in ViewBag.SeniorMale)
+    {
+        <tr>
+            <td>@seniorm</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        seniorm++;
+    }
+</table>
+<br />
+<br />
+<h3>
+    List Of Employees Restriction by MIIT & MFI
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start Date</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int campustype = 1; }
+    @foreach (var employee in ViewBag.MIITMFI)
+    {
+        <tr>
+            <td>@campustype</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        campustype++;
+    }
+</table>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVC1153.Models.Employee>
+
+<h2>Example 7</h2>
+<h3> List of Employees</h3>
+
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Position</th>
+    </tr>
+    @{ int row = 1;}
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@row</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Position</td>
+        </tr>
+    }
+</table>

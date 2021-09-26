@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVC1153.Models.Employee>
+
+<h2>Example 7</h2>
+<br />
+<h3>
+    List Of Employees
+</h3>
+<br />
+<table border="1" width="100%">
+    <tr>
+        <th>#</th>
+        <th>Emp</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Position</th>
+        <th>Start</th>
+        <th>Campus</th>
+        <th>Salary</th>
+    </tr>
+    @{int row = 1; }
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@row</td>
+            <td>@employee.EmpId</td>
+            <td>@employee.Name</td>
+            <td>@employee.Gender</td>
+            <td>@employee.Position</td>
+            <td>@employee.StartDate.ToShortDateString()</td>
+            <td>@employee.Campus</td>
+            <td>@employee.Salary.ToString("c")</td>
+        </tr>
+        row++;
+    }
+</table>
